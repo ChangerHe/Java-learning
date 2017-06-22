@@ -1,0 +1,21 @@
+//获取数组中最后一个索引
+class lastindexOf 
+{
+	static void lastindexOf(String[] args,String key){
+		for ( int i = args.length ; i > 0 ; i-- )
+		{
+			if ( args[i] == key )
+			{
+				System.out.println(i);
+				break;
+			}
+
+		}
+	}
+	public static void main(String[] args) 
+	{
+		String[] firstText = {"1","a","d","a","a"};
+		String keyText = "a";
+		lastindexOf(firstText , keyText);
+	}
+}
