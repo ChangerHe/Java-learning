@@ -17,6 +17,10 @@ class BubbleSort
 				}
 			}
 		}
+
+
+
+
 		String PrintArr = "[";    //打包成字符输出
 		for ( int i = 0; i < arr.length ; i++ )   
 		{
