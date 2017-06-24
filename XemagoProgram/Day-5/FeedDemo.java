@@ -1,0 +1,47 @@
+//饲养员喂狗和喂猫的非多态写法
+class Animal
+{
+	public void eat(){
+		System.out.println("Eat something");
+	}
+}
+class dog extends Animal
+{
+	public void eat()
+	{
+		System.out.println("Eat bones");
+	}
+}
+class cat extends Animal
+{
+	public void eat()
+	{
+		System.out.println("Eat fishes");
+	}
+}
+class Human
+{
+	
+}
+class Person extends Human
+{
+	public void feed(Animal d)
+	{
+		System.out.println("Feed you bones");
+	}
+}
+
+
+class  FeedDemo
+{
+	public static void main(String[] args) 
+	{
+		Person p1 = new Person();
+		cat c1 = new cat();
+		dog d1 = new dog();
+		p1.feed(c1);
+		p1.feed(d1);
+		c1.eat();
+		d1.eat();
+	}
+}
