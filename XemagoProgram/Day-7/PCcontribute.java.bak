@@ -1,0 +1,43 @@
+abstract class TotalOperate
+{
+	public long getTotalTime()
+	{
+		long begin = System.currentTimeMillis();
+		doWork();
+		long end = System.currentTimeMillis();
+		long time = end - begin;
+		return time;
+	}
+	public abstract void doWork();
+}
+class StringOperate extends TotalOperate
+{
+	public void doWork()
+	{
+		String str = "";
+		for (int i = 0; i < 10000 ; i++ )
+		{
+			str += 1;
+		}
+	}
+}
+class IntOperate extends TotalOperate
+{
+	public void doWork()
+	{
+		int str = 0;
+		for (int i = 0; i < 10000 ; i++ )
+		{
+			str += 1;
+		}
+	}
+}
+//连接方法
+class  PCcontribute
+{
+	public static void main(String[] args) 
+	{
+		System.out.println(new StringOperate().getTotalTime());
+		System.out.println(new IntOperate().getTotalTime());
+	}
+}

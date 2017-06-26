@@ -1,0 +1,34 @@
+interface IUSB 
+{
+	void SwapUSB();
+
+}
+class Mouse implements IUSB
+{
+	public void SwapUSB()
+	{
+		System.out.println("I can Move.");
+	}
+}
+class Kboard implements IUSB
+{
+	public void SwapUSB()
+	{
+		System.out.println("I can Write.");
+	}
+}
+class motherBoard
+{
+	public static void Write(IUSB n)
+	{
+		n.SwapUSB();
+	}
+}
+class  PloymentDemo
+{
+	public static void main(String[] args) 
+	{
+		IUSB m1 = new Mouse();
+		motherBoard.Write(m1);
+	}
+}
